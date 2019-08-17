@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Aparecida Nutrição</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h1>Aparecida Nutrição</h1>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Meus pacientes</h2>
+				<label for="filtro">Buscar paciente:</label>
+				<input type="text" name="filtro" id="filtro">
+				<table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Peso(kg)</th>
+							<th>Altura(m)</th>
+							<th>Gordura Corporal(%)</th>
+							<th>IMC</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-pacientes">
+						<!--Exemplos hard code-->
+							<tr class="paciente" >
+									<td class="info-nome">Paulo</td>
+									<td class="info-peso">100</td>
+									<td class="info-altura">2.00</td>
+									<td class="info-gordura">10</td>
+									<td class="info-imc">25.00</td>
+								</tr>
+		
+								<tr class="paciente" >
+									<td class="info-nome">João</td>
+									<td class="info-peso">80</td>
+									<td class="info-altura">1.72</td>
+									<td class="info-gordura">40</td>
+									<td class="info-imc">27.04</td>
+								</tr>
+					</tbody>
+				</table>
+			</section>
+		</main>
+		
+		<section class="container">
+				<h2>Cadastrar Paciente</h2>
+				<ul id="validacaoForm"></ul>
+			<form action="" id="form-adiciona">
+				<div class="">
+							<label for="nome">Nome: </label>
+							<input type="text" id="nome" name="nome" placeholder="Digite o nome do paciente" class="campo">
+						</div>
+				<div class="grupo">
+					<label for="peso">Peso: </label>
+					<input type="text" id="peso" name="peso" placeholder="Digite o peso do paciente" class="campo campo-medio">
+				</div>	
+				<div class="grupo">
+						<label for="altura">Altura: </label>
+						<input type="text" id="altura" name="altura" placeholder="Digite a altura do paciente" class="campo campo-medio">
+				</div>
+				<div class="grupo">
+						<label for="gordura">Gordura: </label>
+						<input type="text" id="gordura" name="gordura" placeholder="Digite a gordura do paciente" class="campo campo-medio">
+				</div>
+
+				<button id="adicionar-paciente" class="botao bto-principal">Adicionar formulario</button>
+			</form>
+
+		</section>
+		
+		<div class="container">
+			<label for="importa-paciente">Botão para importar pacientes atravé de API</label>
+			<button id="importa-paciente" class="botao bto-principal">Adicionar paciente remoto</button>
+		</div>
+
+
+		<script type="text/javascript" src="js/comum.js"></script>
+		<script type="text/javascript" src="js/paciente.js"></script>
+		<script type="text/javascript" src="js/validacoes.js"></script>
+		<script type="text/javascript" src="js/ajax.js"></script>
+		<script type="text/javascript" src="js/componenteAdicionarRemoto.js"></script>
+		<script type="text/javascript" src="js/componenteForm.js"></script>
+		<script type="text/javascript" src="js/componenteTabela.js"></script>
+		
+	</body>
+</html>
