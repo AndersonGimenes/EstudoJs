@@ -1,7 +1,8 @@
-class NegociacoesView{
+class NegociacoesView extends ViewBase{
 
-    update(idNegociacoes, negociacoesModel){
-        idNegociacoes.innerHTML = this._template(negociacoesModel);    
+    constructor(elemento){
+        // Mesma ideia do base c#
+        super(elemento)
     }
 
     // private
